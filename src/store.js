@@ -26,4 +26,10 @@ export const store = reactive({
       iconClass: "fa-envelope",
     },
   ],
+  api: {
+    baseUrl: "http://localhost:3000/",
+    monthlyConnections: "MonthlyConnections",
+    userAgeRange: "UsersAgeRange",
+    devices: "Devices",
+  },
 });
