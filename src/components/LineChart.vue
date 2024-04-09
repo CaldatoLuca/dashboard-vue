@@ -14,7 +14,6 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "vue-chartjs";
-import * as chartConfig from "../charts/lineChart";
 
 ChartJS.register(
   CategoryScale,
@@ -32,7 +31,30 @@ export default {
     Line,
   },
   data() {
-    return chartConfig;
+    return {
+      data: {
+        labels: [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+        ],
+        datasets: [
+          {
+            label: "Data One",
+            backgroundColor: "#f87979",
+            data: [40, 39, 10, 40, 39, 80, 40],
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+      },
+    };
   },
 };
 </script>
