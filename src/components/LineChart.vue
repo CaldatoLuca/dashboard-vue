@@ -1,7 +1,3 @@
-<template>
-  <Line :data="data" :options="options" />
-</template>
-
 <script lang="ts">
 import {
   Chart as ChartJS,
@@ -30,23 +26,16 @@ export default {
   components: {
     Line,
   },
+  props: ["x", "y", "time", "name"],
   data() {
     return {
       data: {
-        labels: [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
-        ],
+        labels: this.x,
         datasets: [
           {
-            label: "Data One",
+            label: this.time,
             backgroundColor: "#f87979",
-            data: [40, 39, 10, 40, 39, 80, 40],
+            data: this.y,
           },
         ],
       },
@@ -56,5 +45,23 @@ export default {
       },
     };
   },
+  methods: {
+    showData() {
+      console.log("grafico " + this.x);
+      console.log("grafico " + this.y);
+    },
+  },
+  mounted() {
+    this.showData();
+  },
 };
 </script>
+
+<template>
+  <div class="card">
+    <div class="card-header text-center p-3">{{ this.name }}</div>
+    <div class="card-body">
+      <Line :data="data" :options="options" style="height: 400px" />
+    </div>
+  </div>
+</template>
