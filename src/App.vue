@@ -1,16 +1,20 @@
 <script>
+import Main from "./components/Main.vue";
+import Nav from "./components/Nav.vue";
+
 export default {
-  data() {
-    return {
-      title: "Vite Template",
-    };
+  components: {
+    Main,
+    Nav,
   },
 };
 </script>
 
 <template>
-  <h1 class="text-center pt-5">{{ title }}</h1>
-  <h3 class="text-center">Template Vite con Bootstrap. SCSS e Axios</h3>
+  <div class="d-flex">
+    <Nav></Nav>
+    <Main></Main>
+  </div>
 </template>
 
 <style scoped></style>
