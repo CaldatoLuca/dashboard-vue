@@ -1,10 +1,16 @@
 <script>
-export default {};
+import Header from "../components/Header.vue";
+
+export default {
+  components: {
+    Header,
+  },
+};
 </script>
 
 <template>
-  <main class="min-vh-100">
-    <h1>Main</h1>
+  <main class="min-vh-100 flex-grow-1">
+    <Header></Header>
   </main>
 </template>
 

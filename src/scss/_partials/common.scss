@@ -12,3 +12,9 @@ ul,
 li {
   margin-bottom: 0;
 }
+
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none; /* Optionally remove box-shadow as well */
+}
