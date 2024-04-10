@@ -58,7 +58,7 @@ export default {
 </script>
 
 <template>
-  <div class="card">
+  <div class="card mb-5">
     <div class="card-header text-center p-3">{{ this.name }}</div>
     <div class="card-body">
       <Line :data="data" :options="options" style="height: 400px" />
