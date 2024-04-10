@@ -94,11 +94,14 @@ export default {
       />
 
       <div class="d-flex mb-5 justify-content-between">
+        <!-- Range età user -->
         <BarChart
           :x="this.userAgeRange.xAxe"
           :y="this.userAgeRange.yAxe"
           :name="'Users Age Range'"
         ></BarChart>
+
+        <!-- Sistema operativo -->
         <DoughnutChart
           :devices="this.operatingSystem.devices"
           :percentage="this.operatingSystem.percentage"
